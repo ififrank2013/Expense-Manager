@@ -1,10 +1,13 @@
-## Expense Manager
-### Project Description
+# Expense Manager
 
+
+## Project Description
 The Expense Manager is a Python program that models and manages financial expenses. It consists of two classes: Expense and ExpenseDB.
+
 
 ### Expense Class
 Represents an individual financial expense.
+
 
 ##### Attributes:
 The Expense Class has the following attributes:
@@ -38,3 +41,18 @@ __init__: Initializes the ExpenseDB attributes.
 `get_expense_by_id`: Retrieves an expense by ID.
 `get_expense_by_title`: Retrieves expenses by title (returning a list).
 `to_dict`: Returns a list of dictionaries representing expenses.
+
+
+## How to clone the repository
+1. Open your terminal.
+2. Run: `git clone https://github.com/ififrank2013/expense-manager.git`
+
+
+
+## How to Run the code:
+
+Ensure you have Python installed.
+
+```bash
+cd expense-manager
+python main.py
