@@ -9,7 +9,7 @@ The Expense Manager is a Python program that models and manages financial expens
 Represents an individual financial expense.
 
 
-##### Attributes:
+##### Attributes
 The Expense Class has the following attributes:
 
 `id`: A unique identifier generated as a UUID string.
@@ -19,8 +19,7 @@ The Expense Class has the following attributes:
 `updated_at`: A timestamp indicating the last time the expense was updated (UTC).
 
 
-##### Methods:
-
+##### Methods
 __init__: Initializes the attributes.
 `update`: Allows updating the title and/or amount, and updating the \updated_at\ timestamp.
 `to_dict`: Returns a dictionary representation of the expense.
@@ -29,12 +28,12 @@ __init__: Initializes the attributes.
 ### ExpenseDB Class
 Manages a collection of Expense objects.
 
-##### Attributes:
+
+##### Attributes
 `database`: A list storing Expense instances.
 
 
-##### Methods:
-
+##### Methods
 __init__: Initializes the ExpenseDB attributes.
 `add_expense`: Adds an expense.
 `remove_expense`: Removes an expense.
@@ -48,9 +47,7 @@ __init__: Initializes the ExpenseDB attributes.
 2. Run: `git clone https://github.com/ififrank2013/expense-manager.git`
 
 
-
-## How to Run the code:
-
+## How to Run the code
 Ensure you have Python installed.
 
 ```bash
