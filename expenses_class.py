@@ -98,9 +98,10 @@ class ExpenseDB:
 
 
 
-
 # Instantiating the classes
 if __name__ == "__main__":
+
+    # Defining instances of expenses
     expense_1 = Expense(title = 'Food procurement', amount = 20000.50)
     expense_2 = Expense(title = 'Transportation', amount = 50000)
     expense_3 = Expense(title = 'Internet bundle', amount = 70000)
@@ -108,7 +109,7 @@ if __name__ == "__main__":
     exp_db = ExpenseDB()
 
     for expense in [expense_1, expense_2, expense_3]:
-        exp_db.add_expense(expense)
+        exp_db.add_expense(expense) # This adds 3 expenses to the database
         print(exp_db.database)
         print()
         print('*'*20)
