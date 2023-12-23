@@ -10,24 +10,40 @@ from datetime import datetime, timezone
 This class object represents an individuals' financial expense
 """
 class Expense:
+class Expense:
     """
     Defining the class attributes/states
     """
     def __init__(self, title, amount):
-        pass
+        self.id = str(uuid4())  # A unique identifier for each expense.
+        self.title = title  # A string representing the title of the expense.
+        self.amount = float(amount) # A float representing the amount of the expense.
+        self.created_at = datetime.now(timezone.utc)  # A timestamp indicating when the expense was created.
+        self.updated_at = self.created_at  # A timestamp indicating the time when an expense was last updated.
 
     """
-    This method enabkes the updagting of the title and/or amount of each expense
+    This method enables the updagting of the title and/or amount of each expense
     """
     def update(self, expense_title=None, expense_amount=None):
-        pass
+        if expense_title:
+            self.title = expense_title
+            print(f"The title has been updated to {expense_title}")
+        if expense_amount:
+            self.amount = expense_amount
+            print(f"The amount has been updated to {expense_amount}")
+        self.updated_at = datetime.now(timezone.utc)
 
     """
     This method converts each expense to a dictionary
     """
     def to_dict(self):
-        pass
-
+        return {
+            'id': self.id,
+            'title': self.title,
+            'amount': self.amount,
+            'created_at': self.created_at.isoformat(),
+            'updated_at': self.updated_at.isoformat()
+        }
 
 
 
