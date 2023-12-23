@@ -23,13 +23,13 @@ class Expense:
     """
     This method enables the updagting of the title and/or amount of each expense
     """
-    def update(self, expense_title=None, expense_amount=None):
-        if expense_title:
-            self.title = expense_title
-            print(f"The title has been updated to {expense_title}")
-        if expense_amount:
-            self.amount = expense_amount
-            print(f"The amount has been updated to {expense_amount}")
+    def update(self, title=None, amount=None):
+        if title:
+            self.title = title
+            print(f"The title has been updated to {title}")
+        if amount:
+            self.amount = amount
+            print(f"The amount has been updated to {amount}")
         self.updated_at = datetime.now(timezone.utc)
 
     """
