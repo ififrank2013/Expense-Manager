@@ -10,7 +10,6 @@ from datetime import datetime, timezone
 This class object represents an individuals' financial expense
 """
 class Expense:
-class Expense:
     """
     Defining the class attributes/states
     """
@@ -45,6 +44,9 @@ class Expense:
             'updated_at': self.updated_at.isoformat()
         }
 
+    def __repr__(self) -> str:
+        return f"{self.title}_{self.amount}"
+
 
 
 
@@ -60,33 +62,38 @@ class ExpenseDB:
     This method inserts a new expense to the database
     """
     def add_expense(self, expense):
-        pass
+        self.database.append(expense)
+        print(f"{expense} Expenses have been successfully added to the database with ID: {expense.id}")
 
 
     """ 
     This method removes an expense from database based on expense id
     """
     def remove_expense(self, expense_id):
-        pass
+        self.database = [expense for expense in self.database if expense.id != expense_id]
+        print(f"The expense with id:  {expense_id} has been deleted from the database")
 
 
     """
     This method retrieves an expense from the database based on expense id
     """
     def get_expense_by_id(self, expense_id):
-        pass
+        for expense in self.database:
+            if expense.id == expense_id:
+                return expense
+        return None
 
     """
     This method retrieves a list of expenses from the database based on expense title
     """
     def get_expenses_by_title(self, expense_title):
-        pass
+        return [expense for expense in self.database if expense.title == expense_title]
 
     """
     This method retrieves a list of dictionaries representing expenses.
     """
     def to_dict(self):
-        pass
+        return [expense.to_dict() for expense in self.database]
 
 
 
