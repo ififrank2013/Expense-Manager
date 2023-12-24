@@ -53,7 +53,7 @@ class Expense:
 """
 This class object manages a collection of Expense objects. It enables the manipulation of Expense objects.
 """
-class ExpenseDB:
+class ExpenseDatabase:
     def __init__(self):
         self.database = []
 
@@ -86,7 +86,7 @@ class ExpenseDB:
     """
     This method retrieves a list of expenses from the database based on expense title
     """
-    def get_expenses_by_title(self, expense_title):
+    def get_expense_by_title(self, expense_title):
         return [expense for expense in self.database if expense.title == expense_title]
 
     """
@@ -106,7 +106,7 @@ if __name__ == "__main__":
     expense_2 = Expense(title = 'Transportation', amount = 50000)
     expense_3 = Expense(title = 'Internet bundle', amount = 70000)
 
-    exp_db = ExpenseDB()
+    exp_db = ExpenseDatabase()
 
     for expense in [expense_1, expense_2, expense_3]:
         exp_db.add_expense(expense) # This adds 3 expenses to the database
