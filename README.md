@@ -2,7 +2,7 @@
 
 
 ## Project Description
-The Expense Manager is a Python program that models and manages financial expenses. It consists of two classes: Expense and ExpenseDB.
+The Expense Manager is a Python program that models and manages financial expenses. It consists of two classes: Expense and ExpenseDatabase.
 
 
 ### Expense Class
@@ -25,7 +25,7 @@ __init__: Initializes the attributes.
 `to_dict`: Returns a dictionary representation of the expense.
 
 
-### ExpenseDB Class
+### ExpenseDatabase Class
 Manages a collection of Expense objects.
 
 
@@ -34,7 +34,7 @@ Manages a collection of Expense objects.
 
 
 ##### Methods
-__init__: Initializes the ExpenseDB attributes.
+__init__: Initializes the ExpenseDatabase attributes.
 `add_expense`: Adds an expense.
 `remove_expense`: Removes an expense.
 `get_expense_by_id`: Retrieves an expense by ID.
